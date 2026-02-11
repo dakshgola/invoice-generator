@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import React from "react";
 import { Button, Card } from "antd";
 import { Plus } from "lucide-react";
@@ -6,33 +5,55 @@ import { Plus } from "lucide-react";
 const Home = ({ onCreate }) => {
   return (
     <div style={styles.wrapper}>
-      <div style={styles.header}>
-        <h1 style={styles.title}>Invoice Generator</h1>
+      {/* Logo */}
+      <div style={styles.navbar}>
+        <h2 style={styles.logo}>InvoiceGen</h2>
+      </div>
+
+      {/* Hero Section */}
+      <div style={styles.hero}>
+        <h1 style={styles.title}>
+          Simple. Fast. Professional Invoices.
+        </h1>
+
+        <p style={styles.subtitle}>
+          A clean and minimal invoice generator built with React & Ant Design.
+          Create, calculate, and print invoices instantly.
+        </p>
+
         <Button
           type="primary"
           size="large"
           icon={<Plus size={18} />}
           onClick={onCreate}
+          style={styles.heroButton}
         >
-          Create Invoice
+          Start Creating
         </Button>
       </div>
 
-      <div style={styles.cards}>
+      {/* Features */}
+      <div style={styles.features}>
         <Card style={styles.card}>
-          <h3>Total Revenue</h3>
-          <p style={styles.value}>₹ 0</p>
+          <h3>⚡ Instant Calculations</h3>
+          <p>
+            Automatic subtotal, GST, and grand total calculations in real-time.
+          </p>
         </Card>
 
         <Card style={styles.card}>
-          <h3>Total Invoices</h3>
-          <p style={styles.value}>0</p>
+          <h3>🖨 Print Ready</h3>
+          <p>
+            Generate professional invoice previews and print them instantly.
+          </p>
         </Card>
 
-        <Card style={styles.card}>
-          <h3>Pending Payments</h3>
-          <p style={styles.value}>₹ 0</p>
-        </Card>
+      </div>
+
+      {/* Footer */}
+      <div style={styles.footer}>
+        Designed for simplicity
+
       </div>
     </div>
   );
@@ -42,31 +63,62 @@ const styles = {
   wrapper: {
     minHeight: "100vh",
     background: "#f9fafb",
-    padding: "60px",
+    padding: "60px 80px",
   },
-  header: {
+
+  navbar: {
     display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginBottom: "40px",
+    justifyContent: "flex-start",
+    marginBottom: "60px",
   },
+
+  logo: {
+    fontSize: "22px",
+    fontWeight: "600",
+  },
+
+  hero: {
+    textAlign: "center",
+    maxWidth: "700px",
+    margin: "0 auto 80px",
+  },
+
   title: {
-    fontSize: "28px",
-    fontWeight: "600",
+    fontSize: "42px",
+    fontWeight: "700",
+    marginBottom: "20px",
   },
-  cards: {
+
+  subtitle: {
+    fontSize: "18px",
+    color: "#6b7280",
+    marginBottom: "30px",
+  },
+
+  heroButton: {
+    height: "50px",
+    padding: "0 30px",
+    fontSize: "16px",
+    borderRadius: "8px",
+  },
+
+  features: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-    gap: "20px",
+    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+    gap: "24px",
+    marginBottom: "80px",
   },
+
   card: {
-    borderRadius: "12px",
-    boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
+    borderRadius: "14px",
+    boxShadow: "0 6px 20px rgba(0,0,0,0.04)",
+    border: "1px solid #f0f0f0",
   },
-  value: {
-    fontSize: "24px",
-    fontWeight: "600",
-    marginTop: "10px",
+
+  footer: {
+    textAlign: "center",
+    color: "#9ca3af",
+    fontSize: "14px",
   },
 };
 

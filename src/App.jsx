@@ -168,7 +168,7 @@ const App = () => {
       <Home onCreate={handleOpen} />
 
       {/* FLOATING ACTION BUTTONS */}
-      <div className="fixed top-6 left-6 flex flex-col gap-4">
+      <div>
         <Tooltip title="Create Invoice">
           <Button
             type="primary"
