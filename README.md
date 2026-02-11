@@ -1,16 +1,41 @@
-# React + Vite
+# 📄 Invoice Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Invoice Generator built with **React + Vite + Ant Design**.  
+Create, calculate, generate, and print professional invoices instantly.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- Create invoices with product details
+- Add / Remove dynamic products
+- Automatic subtotal calculation
+- GST calculation
+- Grand total calculation
+- Invoice preview mode
+- Print-ready invoice
+- Drawer-based invoice creation flow
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React (Vite)
+- Ant Design
+- Lucide Icons
+- Day.js
+- Animate.css
+
+---
+
+## 🧾 How It Works
+
+1. Click **Create Invoice**
+2. Fill customer details
+3. Add products
+4. Enter GST rate
+5. Click **Generate Invoice**
+6. Preview invoice
+7. Click **Print Invoice**
+
+The invoice opens in a clean print window.
